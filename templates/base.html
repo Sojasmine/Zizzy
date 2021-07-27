@@ -16,12 +16,15 @@
     {% block corecss %}
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lato&display=swap" >
+        <link rel="stylesheet" href="{% static 'css/base.css' %}">
     {% endblock %}
 
     {% block extra_css %}
     {% endblock %}
 
     {% block corejs %}
+        <script src="https://kit.fontawesome.com/ee85c59c17.js" crossorigin="anonymous"></script>
         <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
         </script>
@@ -40,11 +43,11 @@
 </head>
 
 <body>
-    <header class="container-fluid fxed-top">
-    <div class="row">
+    <header class="container-fluid fixed-top">
+    <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
             <a href="{% url 'home' %" class="nav-link main-logo-link">
-                <h2 class="logo-font text-black my-0"><strong>Boutique</strong></h2>
+                <h2 class="logo-font text-black my-0"><strong>Zizzy</strong></h2>
             </a>
         </div>
         <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
@@ -66,7 +69,7 @@
                 <li class="list-inline-item dropdown">
                     <a class="text-black nav-link" href="#" id="user-options" data-toggle="dropdown" aria-hidden="true" aria-expanded="false">
                         <div class="text-center">
-                            <div><i class="fas-fa-user fa-lg"></i></div>
+                            <div><i class="fas fa-user fa-lg"></i></div>
                             <p class="my-0">My Account</p>
                         </div>
                     </a>
@@ -76,10 +79,10 @@
                         <a href="" class="dropdown-item">Product Management</a>
                         {% endif %}
                         <a href="" class="dropdown-item">My Profile</a>
-                        <a href="{% url 'account_logout %}" class="dropdown-item">Logout</a>
+                        <a href="{% url 'account_logout' %}" class="dropdown-item">Logout</a>
                     {% else %}
-                        <a href="{% url 'account_signup %}" class="dropdown-item">Register</a>
-                        <a href="{% url 'account_login %}" class="dropdown-item">Login</a>
+                        <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
+                        <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                     {% endif %}
                     </div>
                 </li>
