@@ -34,7 +34,7 @@ body {
 }
 
 .btn-black {
-    background: black;
+    background: white;
     color: white;
 }
 
@@ -44,7 +44,7 @@ body {
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
-    background: #555;
+    background: black;
     color: white;
 }
 
@@ -53,9 +53,12 @@ body {
 }
 
 .border-black {
-    border: 1px solid black !important;
+    border: 1px solid #000 !important;
 }
 
+.bg-black {
+    background-color: #000 !important;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
@@ -79,3 +82,4 @@ body {
         padding-top: 164px;
     }
 }
+
