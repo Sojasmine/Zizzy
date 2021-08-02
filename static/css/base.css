@@ -102,6 +102,9 @@ a.category-badge > span.badge:hover {
     cursor: pointer;
 }
 
+.-mb-1 {
+    background-color: violet;
+}
 /* -------------------------------- Media Queries */
 
 /* Slightly larger container on xl screens */
