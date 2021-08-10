@@ -32,7 +32,7 @@
     right: .5rem;
 }
 
-#payment-form .form-control
+#payment-form .form-control,
 #card-element {
     color: #000;
     border: 1px solod #000;
