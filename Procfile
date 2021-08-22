@@ -1,1 +1,1 @@
-web: gunicorn zizzy.wsgi
+web: gunicorn zizzy.wsgi:application
